@@ -25,14 +25,6 @@ def setup_retrieval_chain(docs, openai_api_key):
     embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
     vector_db = Chroma.from_documents(split_docs, embeddings)
     
-    # prompt_template = PromptTemplate(
-    #     template="Answer the question based only on the following context:\n{context}\nQuestion: {question}",
-    #     input_variables=["context", "question"]
-    # )
-    
-    # retriever = vector_db.as_retriever()
-    # qa_chain = RetrievalQA(llm=ChatOpenAI(openai_api_key=openai_api_key), retriever=retriever, prompt=prompt_template)
-    
     template = """Use the following pieces of context to answer the question at the end.
     If you don't know the answer, just say that you don't know, don't try to make up an answer.
     Write with simple language. Write at least least 5 sentences.
@@ -86,7 +78,5 @@ def main():
             response = st.session_state.qa_chain.invoke(query)
             st.write(f"**Answer:** {response}")
     
-
-
 if __name__ == "__main__":
     main()
