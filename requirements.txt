@@ -1,0 +1,8 @@
+python-dotenv==1.0.1
+beautifulsoup4
+chromadb
+langchain-0.3.19
+langchain-community-0.3.18
+langchain-core-0.3.39
+langchain-openai-0.3.7
+streamlit
