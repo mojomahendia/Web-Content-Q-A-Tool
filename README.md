@@ -26,17 +26,23 @@ Assisting with research without requiring extensive manual reading.
 🛠 How to Run
 
 1️⃣ Set Up the Environment
+
 conda create -n aisensy python=3.11 -y
 conda activate aisensy
+
 2️⃣ Install Dependencies
 Make sure you have a requirements.txt file with all necessary dependencies. Then, run:
 
 pip install -r requirements.txt
+
+
 3️⃣ Set Up Environment Variables
 Create a .env file in the project root and add your OpenAI API key:
 
 OPENAI_API_KEY=your_openai_api_key
+
 4️⃣ Run the Application
+
 Depending on whether you're using Streamlit or another framework:
 
 If Streamlit is used:
@@ -45,6 +51,8 @@ streamlit run app.py
 If Flask/FastAPI is used:
 
 python app.py
+
 5️⃣ Access the Web App
+
 Once running, open the displayed local URL (e.g., http://localhost:8501/ for Streamlit).
 
